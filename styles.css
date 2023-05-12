@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text: white;
+    --bg: url(./assets/bg-mobile.jpg);
+    --border: 1px solid rgba(255, 255, 255, 0.5);
+    --background: rgba(255, 255, 255, 0.1);
+    --background-hover: rgba(255, 255, 255, 0.3);
+    --button-url: url(./assets/lua.svg);
+}
+.light{
+    --text: black;
+    --bg: url(./assets/bg-mobile-light.jpg);
+    --border: 1px solid rgba(0, 0, 0, 0.5);
+    --background: rgba(0, 0, 0, 0.1);
+    --background-hover: rgba(0, 0, 0, 0.3);
+    --button-url: url(./assets/sol.svg);
+}
+
+body{
+ background: var(--bg) no-repeat top center/cover ;
+}
+body *{
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+}
+#container {
+    width: 360px;   
+    margin: 56px auto 0px;
+    
+}
+#profile{
+    padding: 24px;
+    text-align: center;
+}
+
+#profile img{
+    width: 112px;
+}
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+}
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--button-url) no-repeat center;
+    border-radius: 50%;
+    border: 0;
+    top: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    transform: translateY(-50%);
+}
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--background);
+    border: var(--border);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+ul{
+    padding: 24px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+ul li a{
+    padding: 16px 24px;
+    border: var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background .2s;
+}
+/* pseudo-selector*/
+ul li a:hover{
+    background: var(--background-hover);
+    border: 1.5px solid var(--text);
+}
+
+#social-links{
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0;
+    display: flex;
+    gap: 16px;
+    font-size: 24px;
+}
+#social-links ion-icon{
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+#social-links a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#social-links ion-icon:hover{
+    background-color: var(--background-hover);
+}
+#direitos{
+    padding: 10px;
+    text-align: center;
+}
+#direitos p{
+    font-weight: 500; 
+    font-size: 14px;   
+}
+#direitos a{
+    color: var(--text);
+  
+}
+
